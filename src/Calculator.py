@@ -26,10 +26,9 @@ def square_root_a_number(a):
 
 
 class Calculator:
-    result = 0
 
     def __init__(self):
-        pass
+        self.result = 0
 
     def add(self, a, b):
         self.result = addition(a, b)
