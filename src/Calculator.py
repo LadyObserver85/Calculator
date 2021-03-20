@@ -21,6 +21,10 @@ def square_a_number(a):
     return a ** 2
 
 
+def square_root_a_number(a):
+    return a ** .5
+
+
 class Calculator:
     result = 0
 
@@ -45,4 +49,8 @@ class Calculator:
 
     def square(self, a):
         self.result = square_a_number(a)
+        return self.result
+
+    def square_root(self, a):
+        self.result = square_root_a_number(a)
         return self.result
