@@ -2,7 +2,7 @@ import unittest
 from Calculator import Calculator
 from CsvReader import CsvReader
 from pprint import pprint
-import sys
+
 
 class MyTestCase(unittest.TestCase):
 
@@ -36,7 +36,8 @@ class MyTestCase(unittest.TestCase):
     def test_divide_method_calculator(self):
         test_data = CsvReader("./src/Unit Test Division.csv").data
         for row in test_data:
-            self.assertAlmostEqual(self.calculator.divide(int(row['Value 2']), int(row['Value 1'])), float(row['Result']))
+            self.assertAlmostEqual(self.calculator.divide(int(row['Value 2']), int(row['Value 1'])),
+                                   float(row['Result']))
             self.assertAlmostEqual(self.calculator.result, float(row['Result']))
 
     def test_square_method_calculator(self):
