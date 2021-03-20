@@ -17,6 +17,10 @@ def division(a, b):
         return 'Error: divisor b can not be zero'
 
 
+def square_a_number(a):
+    return a ** 2
+
+
 class Calculator:
     result = 0
 
@@ -37,4 +41,8 @@ class Calculator:
 
     def divide(self, a, b):
         self.result = division(a, b)
+        return self.result
+
+    def square(self, a):
+        self.result = square_a_number(a)
         return self.result
